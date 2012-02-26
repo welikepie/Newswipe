@@ -1,8 +1,8 @@
-#appname:Random Wiki Article
-#publisher:Mikolaj
-#url:http://
-#image:appicon.png
-#appid:com.welikepie.newswipe
-#desc:not specified
-#type:mobile
-#guid:eaa10e9f-f0f3-4a49-ab2b-305521ea26fb
+#appname: Newswipe
+#publisher: We Like Pie
+#url: http://
+#image: appicon.png
+#appid: com.welikepie.newswipe
+#desc: not specified
+#type: ipad
+#guid: eaa10e9f-f0f3-4a49-ab2b-305521ea26fb

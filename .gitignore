@@ -1,4 +1,6 @@
 tmp
+build
 *.class
 *.pyc
 *.pyo
+*.log
