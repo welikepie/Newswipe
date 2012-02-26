@@ -1,0 +1,159 @@
+Logfile initialized
+[INFO] logfile = E:\Software Projects\Appcelerator\Random Wiki Article\build.log
+[DEBUG] C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\builder.py simulator Random Wiki Article D:\Program Files (x86)\Development\Android SDK E:\Software Projects\Appcelerator\Random Wiki Article com.welikepie.wikitest 3 HVGA /192.168.1.59:58970
+[INFO] Building Random Wiki Article for Android ... one moment
+[INFO] Titanium SDK version: 1.8.1 (01/27/12 17:31 a24502a)
+[DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 0 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 35 seconds)
+[DEBUG] waited 35.430000 seconds on emulator to get ready
+[INFO] Waiting for the Android Emulator to become available
+[DEBUG] com.welikepie.wikitest installed? True
+[INFO] Fastdev server running, deploying in Fastdev mode
+[INFO] Copying project resources..
+[INFO] Detected tiapp.xml change (or assets deleted), forcing full re-build...
+[TRACE] COPYING CREATED FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\appicon.png => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\bin\assets\Resources\appicon.png
+[TRACE] COPYING CREATED FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\default.png => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\bin\assets\Resources\default.png
+[TRACE] COPYING CREATED FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\app.js => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\bin\assets\Resources\app.js
+[TRACE] COPYING CREATED FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\common\jsuri.js => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\bin\assets\Resources\common\jsuri.js
+[TRACE] COPYING CREATED FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\common\utils.js => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\bin\assets\Resources\common\utils.js
+[TRACE] COPYING CREATED FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\common\wiki.js => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\bin\assets\Resources\common\wiki.js
+[TRACE] COPYING CREATED FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\common\wiky.js => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\bin\assets\Resources\common\wiky.js
+[TRACE] COPYING CREATED FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\KS_nav_ui.png => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\bin\assets\Resources\KS_nav_ui.png
+[TRACE] COPYING CREATED FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\KS_nav_views.png => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\bin\assets\Resources\KS_nav_views.png
+[TRACE] COPYING CREATED FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\ui\ApplicationWindow.js => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\bin\assets\Resources\ui\ApplicationWindow.js
+[TRACE] COPYING CREATED FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\ui\ArticleView.js => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\bin\assets\Resources\ui\ArticleView.js
+[TRACE] Generating Java Classes
+[DEBUG] Processing Android resource drawables
+[TRACE] COPYING FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-long-land-hdpi\default.png => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\res\drawable-long-land-hdpi\default_d44e27d97b.png
+[TRACE] COPYING FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-long-land-ldpi\default.png => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\res\drawable-long-land-ldpi\default_d44e27d97b.png
+[TRACE] COPYING FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-long-port-hdpi\default.png => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\res\drawable-long-port-hdpi\default_d44e27d97b.png
+[TRACE] COPYING FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-long-port-ldpi\default.png => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\res\drawable-long-port-ldpi\default_d44e27d97b.png
+[TRACE] COPYING FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-notlong-land-hdpi\default.png => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\res\drawable-notlong-land-hdpi\default_d44e27d97b.png
+[TRACE] COPYING FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-notlong-land-ldpi\default.png => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\res\drawable-notlong-land-ldpi\default_d44e27d97b.png
+[TRACE] COPYING FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-notlong-land-mdpi\default.png => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\res\drawable-notlong-land-mdpi\default_d44e27d97b.png
+[TRACE] COPYING FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-notlong-port-hdpi\default.png => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\res\drawable-notlong-port-hdpi\default_d44e27d97b.png
+[TRACE] COPYING FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-notlong-port-ldpi\default.png => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\res\drawable-notlong-port-ldpi\default_d44e27d97b.png
+[TRACE] COPYING FILE: E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-notlong-port-mdpi\default.png => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\res\drawable-notlong-port-mdpi\default_d44e27d97b.png
+[DEBUG] app stylesheet => E:\Software Projects\Appcelerator\Random Wiki Article\build\android\gen\com\welikepie\wikitest\ApplicationStylesheet.java
+[DEBUG] copying app icon: E:\Software Projects\Appcelerator\Random Wiki Article\build\android\bin\assets\Resources\appicon.png
+[DEBUG] generating theme.xml
+[DEBUG] found drawable-long-land-hdpi splash screen at E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-long-land-hdpi\default.png
+[DEBUG] copying E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-long-land-hdpi\default.png splash screen to E:\Software Projects\Appcelerator\Random Wiki Article\build\android\res\drawable-long-land-hdpi\background.png
+[DEBUG] found drawable-long-land-ldpi splash screen at E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-long-land-ldpi\default.png
+[DEBUG] copying E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-long-land-ldpi\default.png splash screen to E:\Software Projects\Appcelerator\Random Wiki Article\build\android\res\drawable-long-land-ldpi\background.png
+[DEBUG] found drawable-long-port-hdpi splash screen at E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-long-port-hdpi\default.png
+[DEBUG] copying E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-long-port-hdpi\default.png splash screen to E:\Software Projects\Appcelerator\Random Wiki Article\build\android\res\drawable-long-port-hdpi\background.png
+[DEBUG] found drawable-long-port-ldpi splash screen at E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-long-port-ldpi\default.png
+[DEBUG] copying E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-long-port-ldpi\default.png splash screen to E:\Software Projects\Appcelerator\Random Wiki Article\build\android\res\drawable-long-port-ldpi\background.png
+[DEBUG] found drawable-notlong-land-hdpi splash screen at E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-notlong-land-hdpi\default.png
+[DEBUG] copying E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-notlong-land-hdpi\default.png splash screen to E:\Software Projects\Appcelerator\Random Wiki Article\build\android\res\drawable-notlong-land-hdpi\background.png
+[DEBUG] found drawable-notlong-land-ldpi splash screen at E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-notlong-land-ldpi\default.png
+[DEBUG] copying E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-notlong-land-ldpi\default.png splash screen to E:\Software Projects\Appcelerator\Random Wiki Article\build\android\res\drawable-notlong-land-ldpi\background.png
+[DEBUG] found drawable-notlong-land-mdpi splash screen at E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-notlong-land-mdpi\default.png
+[DEBUG] copying E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-notlong-land-mdpi\default.png splash screen to E:\Software Projects\Appcelerator\Random Wiki Article\build\android\res\drawable-notlong-land-mdpi\background.png
+[DEBUG] found drawable-notlong-port-hdpi splash screen at E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-notlong-port-hdpi\default.png
+[DEBUG] copying E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-notlong-port-hdpi\default.png splash screen to E:\Software Projects\Appcelerator\Random Wiki Article\build\android\res\drawable-notlong-port-hdpi\background.png
+[DEBUG] found drawable-notlong-port-ldpi splash screen at E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-notlong-port-ldpi\default.png
+[DEBUG] copying E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-notlong-port-ldpi\default.png splash screen to E:\Software Projects\Appcelerator\Random Wiki Article\build\android\res\drawable-notlong-port-ldpi\background.png
+[DEBUG] found drawable-notlong-port-mdpi splash screen at E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-notlong-port-mdpi\default.png
+[DEBUG] copying E:\Software Projects\Appcelerator\Random Wiki Article\Resources\android\images\res-notlong-port-mdpi\default.png splash screen to E:\Software Projects\Appcelerator\Random Wiki Article\build\android\res\drawable-notlong-port-mdpi\background.png
+[DEBUG] found splash screen at E:\Software Projects\Appcelerator\Random Wiki Article\build\android\bin\assets\Resources\default.png
+[TRACE] Writing out AndroidManifest.xml
+[DEBUG] adding E:\Software Projects\Appcelerator\Random Wiki Article\build\android\gen\com\welikepie\wikitest\ApplicationStylesheet.java to javac build list
+[DEBUG] adding E:\Software Projects\Appcelerator\Random Wiki Article\build\android\gen\com\welikepie\wikitest\R.java to javac build list
+[DEBUG] adding E:\Software Projects\Appcelerator\Random Wiki Article\build\android\gen\com\welikepie\wikitest\RandomWikiArticleActivity.java to javac build list
+[DEBUG] adding E:\Software Projects\Appcelerator\Random Wiki Article\build\android\gen\com\welikepie\wikitest\RandomWikiArticleAppInfo.java to javac build list
+[DEBUG] adding E:\Software Projects\Appcelerator\Random Wiki Article\build\android\gen\com\welikepie\wikitest\RandomWikiArticleApplication.java to javac build list
+[DEBUG] Building Java Sources: "E:\\Software Projects\\Appcelerator\\Random Wiki Article\\build\\android\\gen\\com\\welikepie\\wikitest\\ApplicationStylesheet.java" "E:\\Software Projects\\Appcelerator\\Random Wiki Article\\build\\android\\gen\\com\\welikepie\\wikitest\\R.java" "E:\\Software Projects\\Appcelerator\\Random Wiki Article\\build\\android\\gen\\com\\welikepie\\wikitest\\RandomWikiArticleActivity.java" "E:\\Software Projects\\Appcelerator\\Random Wiki Article\\build\\android\\gen\\com\\welikepie\\wikitest\\RandomWikiArticleAppInfo.java" "E:\\Software Projects\\Appcelerator\\Random Wiki Article\\build\\android\\gen\\com\\welikepie\\wikitest\\RandomWikiArticleApplication.java"
+[INFO] Waiting for SDCard to become available..
+[INFO] Compiling Android Resources... This could take some time
+[DEBUG] Android classes.dex built
+[DEBUG] creating unsigned apk: E:\Software Projects\Appcelerator\Random Wiki Article\build\android\bin\app-unsigned.apk
+[DEBUG] from resource zip => assets/Resources/common/jsuri.js
+[DEBUG] from resource zip => assets/Resources/common/utils.js
+[DEBUG] from resource zip => assets/Resources/common/wiki.js
+[DEBUG] from resource zip => assets/Resources/common/wiky.js
+[DEBUG] from resource zip => assets/Resources/ui/ApplicationWindow.js
+[DEBUG] from resource zip => assets/Resources/ui/ArticleView.js
+[DEBUG] from resource zip => assets/Resources/KS_nav_ui.png
+[DEBUG] from resource zip => assets/Resources/KS_nav_views.png
+[DEBUG] from resource zip => assets/Resources/app.js
+[DEBUG] from resource zip => assets/Resources/appicon.png
+[DEBUG] from resource zip => assets/Resources/default.png
+[DEBUG] from resource zip => assets/app.json
+[DEBUG] from resource zip => assets/index.json
+[DEBUG] from resource zip => assets/tiapp.xml
+[DEBUG] from resource zip => res/drawable/appicon.png
+[DEBUG] from resource zip => res/drawable/background.png
+[DEBUG] from resource zip => res/drawable/close.png
+[DEBUG] from resource zip => res/drawable/facebook_login.png
+[DEBUG] from resource zip => res/drawable/facebook_login_down.png
+[DEBUG] from resource zip => res/drawable/facebook_login_wide.png
+[DEBUG] from resource zip => res/drawable/facebook_login_wide_down.png
+[DEBUG] from resource zip => res/drawable/facebook_logout.png
+[DEBUG] from resource zip => res/drawable/facebook_logout_down.png
+[DEBUG] from resource zip => res/layout/titanium_tabgroup.xml
+[DEBUG] from resource zip => AndroidManifest.xml
+[DEBUG] from resource zip => resources.arsc
+[DEBUG] from resource zip => res/drawable-hdpi/close.png
+[DEBUG] from resource zip => res/drawable-ldpi/close.png
+[DEBUG] from resource zip => res/drawable-long-land-hdpi/background.png
+[DEBUG] from resource zip => res/drawable-long-land-hdpi/default_d44e27d97b.png
+[DEBUG] from resource zip => res/drawable-long-land-ldpi/background.png
+[DEBUG] from resource zip => res/drawable-long-land-ldpi/default_d44e27d97b.png
+[DEBUG] from resource zip => res/drawable-long-port-hdpi/background.png
+[DEBUG] from resource zip => res/drawable-long-port-hdpi/default_d44e27d97b.png
+[DEBUG] from resource zip => res/drawable-long-port-ldpi/background.png
+[DEBUG] from resource zip => res/drawable-long-port-ldpi/default_d44e27d97b.png
+[DEBUG] from resource zip => res/drawable-notlong-land-hdpi/background.png
+[DEBUG] from resource zip => res/drawable-notlong-land-hdpi/default_d44e27d97b.png
+[DEBUG] from resource zip => res/drawable-notlong-land-ldpi/background.png
+[DEBUG] from resource zip => res/drawable-notlong-land-ldpi/default_d44e27d97b.png
+[DEBUG] from resource zip => res/drawable-notlong-land-mdpi/background.png
+[DEBUG] from resource zip => res/drawable-notlong-land-mdpi/default_d44e27d97b.png
+[DEBUG] from resource zip => res/drawable-notlong-port-hdpi/background.png
+[DEBUG] from resource zip => res/drawable-notlong-port-hdpi/default_d44e27d97b.png
+[DEBUG] from resource zip => res/drawable-notlong-port-ldpi/background.png
+[DEBUG] from resource zip => res/drawable-notlong-port-ldpi/default_d44e27d97b.png
+[DEBUG] from resource zip => res/drawable-notlong-port-mdpi/background.png
+[DEBUG] from resource zip => res/drawable-notlong-port-mdpi/default_d44e27d97b.png
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\modules\titanium-facebook.jar => ti/modules/titanium/facebook/LICENSE
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\js.jar => org/mozilla/javascript/resources/Messages.properties
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\js.jar => org/mozilla/javascript/resources/Messages_fr.properties
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\js.jar => org/mozilla/javascript/tools/resources/Messages.properties
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\titanium.jar => org/appcelerator/titanium/build.properties
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\titanium.jar => org/appcelerator/titanium/res/drawable/background.png
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on.png
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_18.png
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_48.png
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_more.png
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_18.png
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_48.png
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_normal.9.png
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_pressed.9.png
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_selected.9.png
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\titanium.jar => org/appcelerator/titanium/res/drawable/default_icon.png
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\titanium.jar => org/appcelerator/titanium/res/drawable/photoDefault.png
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\modules\titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.js
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\modules\titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.min.js
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\modules\titanium-ui.jar => ti/modules/titanium/ui/widget/webview/json2.js
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\thirdparty.jar => org/apache/Commons-NOTICE.txt
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\thirdparty.jar => org/apache/HttpComponents-NOTICE.txt
+[DEBUG] from JAR C:\Users\Mikolaj\AppData\Roaming\Titanium\mobilesdk\win32\1.8.1\android\thirdparty.jar => org/apache/mime4j-NOTICE.txt
+[DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 0 seconds)
+[DEBUG] waited 0.043000 seconds on emulator to get ready
+[INFO] Installing application on emulator
+[INFO] Launching application ... Random Wiki Article
+[TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.welikepie.wikitest/.RandomWikiArticleActivity }
+
+[INFO] Deployed Random Wiki Article ... Application should be running.
