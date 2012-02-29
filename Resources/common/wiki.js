@@ -24,7 +24,7 @@ var wiki = {};
             'error': null
         }; var params = utils.merge(defaults, o);
         
-        Titanium.API.debug("random() called with: " + params.toString());
+        Titanium.API.debug("random() called with: " + JSON.stringify(params));
         
         // Build URL for accessing the data
         var uri = new jsuri.Uri(API_URL)
@@ -44,6 +44,7 @@ var wiki = {};
                 
                 Titanium.API.debug("Success AJAX.");
                 Titanium.API.debug("Response: " + this.responseText);
+                Titanium.API.debug("PARAMS: " + JSON.stringify(params));
                 
                 // Extract article from response
                 var result = JSON.parse(this.responseText);
@@ -60,8 +61,10 @@ var wiki = {};
                 
                 Titanium.API.debug("The content: " + content.toString());
                 
+                try {
                 if (params.success) { Titanium.API.debug("Firing success func."); params.success.bind(this)(content); }
                 if (params.complete) { Titanium.API.debug("Firing complete func."); params.complete.bind(this)(ev, content); }
+                } catch(e) { Titanium.API.error(e); }
             
             },
             'onerror': function(ev) {

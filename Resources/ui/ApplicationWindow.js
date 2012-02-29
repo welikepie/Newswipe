@@ -1,7 +1,7 @@
 //Application Window Component Constructor
 function ApplicationWindow() {
 	
-	var ArticleView = require('ui/ArticleView');
+	var Article = require('ui/Article');
 	var wiki = require('common/wiki');
 	var wiky = require('common/wiky');
 	
@@ -9,7 +9,7 @@ function ApplicationWindow() {
 		
 	//create component instance
 	var self = Ti.UI.createWindow({
-	    title: 'Random Wiki Article',
+	    title: 'Newswipe',
 		backgroundColor:'#ffffff',
 		navBarHidden:false,
 		exitOnClose:true
@@ -18,9 +18,9 @@ function ApplicationWindow() {
 	Titanium.API.debug("Instantiating article view...");
 		
 	//construct UI
-	var articleView = new ArticleView();
+	var article = new Article();
 	Titanium.API.debug("Adding article view to window...");
-	self.add(articleView);
+	self.add(article.view);
 	Titanium.API.debug("Article view added to window.");
 
     var actInd = Ti.UI.createActivityIndicator({
@@ -41,8 +41,9 @@ function ApplicationWindow() {
                 
                 Titanium.API.info("Content delivered: " + this.responseText);
                 content.content = wiky.process(content.content);
-                articleView.setArticle(content);
-                Titanium.API.info("Updated the parameters with: " + content.toString());
+                Titanium.API.debug("Parsed data: " + content.content);
+                article.setArticle(content);
+                Titanium.API.info("Updated the parameters with: " + content);
                 
             },
             'error': function(ev) {

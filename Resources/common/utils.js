@@ -4,6 +4,17 @@
  * no discernable allegiance. A drop-box for useful bits and bobs.
  */
 
+if (!Function.prototype.bind) {
+	
+	Function.prototype.bind = function(dest_obj) {
+		
+		var that = this;
+		return function() { return that.apply(dest_obj, Array.prototype.slice.call(arguments, 0)); };
+		
+	};
+	
+}
+
 var utils = {};
 (function (exports) {
 
