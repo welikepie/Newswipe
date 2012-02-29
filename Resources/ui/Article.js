@@ -1,11 +1,11 @@
-function ArticleView() {
+function Article() {
 
-    Titanium.API.debug("Instantiating the ArticleView...");
+    Titanium.API.debug("Instantiating the Article...");
 
-    var self = Titanium.UI.createWebView();
-    self.setArticle = function(article) {
+    this.view = Titanium.UI.createWebView();
+    this.setArticle = function(article) {
         
-        Titanium.API.debug("setArticle called with: " + article.toString());
+        Titanium.API.debug("setArticle called with: " + article);
         
         var template =
             '<html>' +
@@ -19,12 +19,10 @@ function ArticleView() {
         var test = String.format(template, article.title, article.content);
         Titanium.API.debug("HTML generated: " + test);
         
-        this.setHtml(test);
+        this.view.setHtml(test);
     };
-    
-    return self;
 
 }
 
-module.exports = ArticleView;
+module.exports = Article;
 //if (typeof exports === 'object' && exports) { exports = ArticleView; }
