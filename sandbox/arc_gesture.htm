@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Arc Gesture code</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
+		<style>#test_area { width: 400px; height: 400px; background-color: #EEE; }</style>
+	</head>
+	<body>
+		<p>Tis where test happens: <button type="button" id="end" disabled>End Capture</button></p>
+		<p id="result"></p>
+		<canvas id="test_area" width="400" height="400"></canvas>
+	</body>
+	<script type="text/javascript" src="sylvester.js"></script>
+	<script type="text/javascript">
+	
+		function isPointInPoly(pt, poly){
+			for(var c = false, i = -1, l = poly.length, j = l - 1; ++i < l; j = i)
+				((poly[i].e(2) <= pt.e(2) && pt.e(2) < poly[j].e(2)) || (poly[j].e(2) <= pt.e(2) && pt.e(2) < poly[i].e(2)))
+				&& (pt.e(1) < (poly[j].e(1) - poly[i].e(1)) * (pt.e(2) - poly[i].e(2)) / (poly[j].e(2) - poly[i].e(2)) + poly[i].e(1))
+				&& (c = !c);
+			return c;
+		};
+		
+		Math.TAU = 2 * Math.PI;
+		
+		function findPos(obj) {
+			var curleft = curtop = 0;
+			if (obj.offsetParent) {
+				do {
+					curleft += obj.offsetLeft;
+					curtop += obj.offsetTop;
+				} while (obj = obj.offsetParent);
+			}
+			return {'left': curleft, 'top': curtop};
+		};
+		
+		process = false;
+		points = [];
+		context = null;
+		document.getElementById("test_area").addEventListener("click", function(ev) {
+		
+			if (!process) {
+				process = true;
+				points = [];
+				document.getElementById("end").disabled = false;
+				context = document.getElementById("test_area").getContext('2d');
+				context.clearRect(0, 0, 400, 400);
+			}
+			var pos = findPos(document.getElementById("test_area"));
+			console.log("Offset position: ", pos);
+			var t = $V([ev.clientX - pos.left, ev.clientY - pos.top]);
+			context.fillStyle = 'black'; context.beginPath();
+			context.arc(t.e(1), t.e(2), 4, 0, Math.PI * 2, false);
+			context.fill();
+			console.log("Adding point to list: ", t.inspect());
+			points.push(t);
+		
+		});
+		document.getElementById("end").addEventListener("click", function(ev) {
+			
+			// Calculate mid-point (and thus, translation measurements)
+			var translate = points[0].add(points[points.length-1]).multiply(0.5);
+			context.fillStyle = 'white';
+			context.beginPath(); context.arc(translate.e(1), translate.e(2), 3, 0, Math.PI * 2, false); context.fill();
+			var translated_points = [];
+			for (var i in points)
+				if (points.hasOwnProperty(i))
+					translated_points.push(points[i].subtract(translate));
+			
+			// Calculate proceedings
+			var pointA = translated_points[0].rotate(Math.PI/2, $V([0, 0]));
+			var pointB = translated_points[0].rotate(-Math.PI/2, $V([0, 0]));
+			context.fillStyle = 'orange';
+			context.beginPath(); context.arc(pointA.add(translate).e(1), pointA.add(translate).e(2), 6, 0, Math.PI * 2, false); context.fill();
+			context.beginPath(); context.arc(pointB.add(translate).e(1), pointB.add(translate).e(2), 6, 0, Math.PI * 2, false); context.fill();
+			
+			var pointA_poly = [
+				translated_points[0],
+				translated_points[translated_points.length - 1],
+				translated_points[translated_points.length - 1].add(pointA),
+				translated_points[0].add(pointA)
+			];
+			context.strokeStyle = 'red'; context.beginPath();
+			context.moveTo(pointA_poly[0].add(translate).e(1), pointA_poly[0].add(translate).e(2));
+			context.lineTo(pointA_poly[1].add(translate).e(1), pointA_poly[1].add(translate).e(2));
+			context.lineTo(pointA_poly[2].add(translate).e(1), pointA_poly[2].add(translate).e(2));
+			context.lineTo(pointA_poly[3].add(translate).e(1), pointA_poly[3].add(translate).e(2));
+			context.lineTo(pointA_poly[0].add(translate).e(1), pointA_poly[0].add(translate).e(2));
+			context.stroke();
+			
+			var pointB_poly = [
+				translated_points[0],
+				translated_points[translated_points.length - 1],
+				translated_points[translated_points.length - 1].add(pointB),
+				translated_points[0].add(pointB)
+			];
+			context.strokeStyle = 'green'; context.beginPath();
+			context.moveTo(pointB_poly[0].add(translate).e(1), pointB_poly[0].add(translate).e(2));
+			context.lineTo(pointB_poly[1].add(translate).e(1), pointB_poly[1].add(translate).e(2));
+			context.lineTo(pointB_poly[2].add(translate).e(1), pointB_poly[2].add(translate).e(2));
+			context.lineTo(pointB_poly[3].add(translate).e(1), pointB_poly[3].add(translate).e(2));
+			context.lineTo(pointB_poly[0].add(translate).e(1), pointB_poly[0].add(translate).e(2));
+			context.stroke();
+			
+			// Determine which area the points belong to
+			var pointA_count = 0;
+			var pointB_count = 0;
+			for (var i in translated_points) {
+				if (isPointInPoly(translated_points[i], pointA_poly)) { pointA_count++; }
+				if (isPointInPoly(translated_points[i], pointB_poly)) { pointB_count++; }
+			}
+			console.log("Points: ", translated_points.length - 1, " | A: ", pointA_count, " | B: ", pointB_count);
+			
+			var dest = (pointA_count > pointB_count ? 'A' : 'B');
+			console.log("Current destination: ", dest);
+			console.log(
+				"Hit proportions: ",
+				(dest === 'A' ? pointA_count : pointB_count),
+				" / ",
+				(translated_points.length - 1),
+				" = ",
+				((dest === 'A' ? pointA_count : pointB_count) / (translated_points.length - 1))
+			);
+				
+			// -1 because one of the points will always be considered outside of poly
+			if (dest === 'A' && (pointA_count / (translated_points.length - 1)) < 0.75) { dest = null; }
+			if (dest === 'B' && (pointB_count / (translated_points.length - 1)) < 0.75) { dest = null; }
+			
+			console.log("Midpoint: ", translate.inspect());
+			if (dest === 'A') {
+				console.log("Arc detected!");
+				console.log("Bounding box: ", points[0].inspect(), " -> ", points[points.length - 1].inspect());
+				console.log("Radius: ", points[0].distanceFrom(pointB.add(translate)));
+				console.log("Center: ", pointB.add(translate).inspect());
+				
+				var degree = (Math.atan2(pointB.e(1), pointB.e(2)) + Math.TAU) % Math.TAU;
+				console.log("Degrees: ", (degree / Math.PI * 180));
+			}
+			else if (dest === 'B') {
+				console.log("Arc detected!");
+				console.log("Bounding box: ", points[0].inspect(), " -> ", points[points.length - 1].inspect());
+				console.log("Radius: ", points[0].distanceFrom(pointA.add(translate)));
+				console.log("Center: ", pointA.add(translate).inspect());
+				
+				var degree = (Math.atan2(pointA.e(1), pointA.e(2)) + Math.TAU) % Math.TAU;
+				console.log("Degrees: ", (degree / Math.PI * 180));
+			}
+			else {
+				console.log("No arc.");
+			}
+			
+			document.getElementById("end").disabled = true;
+			process = false;
+			points = [];
+		
+		});
+	</script>
+</html>

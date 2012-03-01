@@ -1,8 +1,8 @@
 PROJECT TO-DO LIST
 ==================
 
-* Research gesture recognition
-  * Code how to recognize arc gestures
+* **[DONE]** Research gesture recognition
+  * *[IN PROGRESS]* Code how to recognize arc gestures
 * Research custom widgets
   * Code the custom-looking buttons
   * Code the general mechanics of radial menu
