@@ -19,6 +19,8 @@ else if (Ti.Platform.osname === 'mobileweb') {
 else {
 	//require and open top level UI component
 	
-	var ApplicationWindow = require('ui/ApplicationWindow');
-	new ApplicationWindow().open();
+	var ArcGestureTest = require("ui/ArcGestureTest");
+	new ArcGestureTest().open({fullscreen: true});
+	//var ApplicationWindow = require('ui/ApplicationWindow');
+	//new ApplicationWindow().open();
 }
