@@ -27,3 +27,6 @@ function ArcGestureTest() {
     return self;
 
 }
+
+//make constructor function the public component interface
+module.exports = ArcGestureTest;
