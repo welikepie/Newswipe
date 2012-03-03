@@ -38,18 +38,19 @@ var gestures = {};
 	exports.arc = function(obj, min_distance, min_threshold) {
 	
 		// Touch data will be contained here
-		var touch_movement = [];
+		var point_data = [];
 		
 		obj.addEventListener("touchstart", function(ev) {
 		    // Reset point data
-		    touch_movement = [Sylvester.Vector.create([ev.x, ev.y])];
+		    point_data = [Sylvester.Vector.create([ev.x, ev.y])];
 		});
 		obj.addEventListener("touchmove", function(ev) {
-		    touch_movement.push(Sylvester.Vector.create([ev.x, ev.y]));
+		    point_data.push(Sylvester.Vector.create([ev.x, ev.y]));
 		});
 		obj.addEventListener("touchend", function(ev) {
 		    
 		    var i, j, x, y;
+		    var touch_movement = point_data;
 		    
 		    // Calculate the translation vector, then translate all the points
 		    var translate = touch_movement[0].add(touch_movement[touch_movement.length-1]).multiply(0.5);
@@ -101,15 +102,15 @@ var gestures = {};
 		            touch_movement[touch_movement.length - 1].e(2)
 		        ];
 		        for (j = 0; j < touch_movement.length; j++) {
-		            x = touch_movement.e(1);
-		            y = touch_movement.e(2);
+		            x = touch_movement[j].e(1);
+		            y = touch_movement[j].e(2);
 		            if (x < event_dict.boundingBox[0]) { event_dict.boundingBox[0] = x; }
 		            if (x > event_dict.boundingBox[2]) { event_dict.boundingBox[2] = x; }
 		            if (y < event_dict.boundingBox[1]) { event_dict.boundingBox[1] = y; }
                     if (y > event_dict.boundingBox[3]) { event_dict.boundingBox[3] = y; }
 		        }
 		        
-		        event_dict.origin = proceeding[i].origin.add(translate.inspect());
+		        event_dict.origin = proceeding[i].origin.add(translate).elements;
 		        event_dict.radius = proceeding[i].origin.distanceFrom(points[0]);
 		        event_dict.angle = (Math.atan2(proceeding[i].origin.e(1), proceeding[i].origin.e(2)) + Math.TAU) % Math.TAU;
 		        
