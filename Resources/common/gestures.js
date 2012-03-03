@@ -53,7 +53,7 @@ var gestures = {};
 		    
 		    // Calculate the translation vector, then translate all the points
 		    var translate = touch_movement[0].add(touch_movement[touch_movement.length-1]).multiply(0.5);
-		    var points = []; for (var i = 0; i < touch_movement.length; i++) {
+		    var points = []; for (i = 0; i < touch_movement.length; i++) {
 		        points.push(touch_movement[i].subtract(translate));
 		    }
 		    
@@ -74,7 +74,7 @@ var gestures = {};
                 ];
                 // Calculate the total number of points contained
                 proceeding[i].count = 0;
-                for (j = 0; i < points.length; j++) {
+                for (j = 0; j < points.length; j++) {
                     if (isPointInPoly(points[j], proceeding[i].area)) {
                         proceeding[i].count++;
                     }
