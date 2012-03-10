@@ -37,7 +37,7 @@ else {
 	    );
 	    tbuttons.push(temp);
 	}
-	var menu = new RadialMenu({top: 0, radius: {outer: 200, inner: 150}, angle: 90, items: tbuttons, backgroundImage: 'radial_menu_background.png'});
+	var menu = new RadialMenu({bottom: 0, right: 0, radius: {outer: 150, inner: 100}, angle: 135, items: tbuttons, backgroundImage: 'ui/radial_menu_background.png'});
 	win.add(menu);
 	win.open();
 	//var ArcGestureTest = require("ui/ArcGestureTest");

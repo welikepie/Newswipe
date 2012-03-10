@@ -72,7 +72,7 @@ var utils = {};
         // provided argument, if it's the array, or create the array
         // of all the arguments past the first one.
         var properties;
-        if (arguments.length === 2 && 'length' in arguments[1]) {
+        if (arguments.length === 2 && Array.isArray(arguments[1])) {
             properties = Array.prototype.slice.call(arguments, 1);
         } else {
             properties = [];
@@ -84,7 +84,7 @@ var utils = {};
         // Prune the properties
         var result = {};
         for (var prop in obj) {
-            if (obj.hasOwnProperty(prop) && (properties.indexOf(prop) !== -1)) {
+            if (obj.hasOwnProperty(prop) && (properties.indexOf(prop) === -1)) {
                 result[prop] = obj[prop];
             }
         }

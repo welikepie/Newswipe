@@ -51,12 +51,20 @@ var RadialMenu = function(props) {
     props.width = props.radius.outer * 2;
     props.height = props.radius.outer;
     
-    // Create the base view
-    var self = Titanium.UI.createView(utils.prune(props,
+    // Adjust the positioning if specified
+    if ('left' in props) { props.left -= props.radius.outer; }
+    if ('right' in props) { props.right -= props.radius.outer; }
+    if ('bottom' in props) { props.bottom -= props.radius.outer; }
+    
+    var t = utils.prune(props,
     	'radius', 'angle',
     	'degrees', 'items',
     	'hidden'
-    ));
+    );
+    Titanium.API.info(JSON.stringify(t));
+    
+    // Create the base view
+    var self = Titanium.UI.createView(t);
     
     // ITEM PLACEMENT
     // ----------------------------
