@@ -19,7 +19,7 @@ function ArcGestureTest() {
         label.setText(
             "Bounding box: [" + ev.boundingBox[0] + "," + ev.boundingBox[1] + "] to [" + ev.boundingBox[2] + "," + ev.boundingBox[3] + "]\n" +
             "Origin: " + ev.origin[0] + ", " + ev.origin[1] + "\n" +
-            "Angle: " + (ev.degree / Math.PI * 180) + "\n" +
+            "Angle: " + (ev.angle / Math.PI * 180) + "\n" +
             "Radius: " + ev.radius
         );
     });
