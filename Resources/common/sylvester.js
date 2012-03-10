@@ -20,6 +20,8 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
+if (!Math.TAU) { Math.TAU = 2 * Math.PI; }
+
 var Sylvester = {};
 (function (exports) {
 

@@ -16,8 +16,6 @@
  */
 var Sylvester = require('common/sylvester');
 
-if (!Math.TAU) { Math.TAU = 2 * Math.PI; }
-
 var gestures = {};
 (function (exports) {
 

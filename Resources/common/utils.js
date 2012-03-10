@@ -92,5 +92,27 @@ var utils = {};
         return result;
         
     };
+    
+    exports.round = function(number, decimal) {
+    	
+    	/* This function extends the functionality of the Math.round()
+    	 * by adding the ability to specify to how many decimal places
+    	 * the rounding should be applied. Specify the number and the
+    	 * number of decimal places to round to and you're done
+    	 * (specifying 0 as the decimal gives you the exact same result
+    	 * 	as calling Math.round on the number directly).
+    	 */
+    	
+    	if ((typeof decimal === 'number') && (decimal >= 0)) {
+    		if (decimal === 0) {
+    			return Math.round(number);
+    		} else {
+    			return Math.round(number * Math.pow(10, decimal)) / Math.pow(10, decimal);
+    		}
+    	} else {
+    		throw 'Number of decimal places needs to be a positive integer.';
+    	}
+    	
+    };
 
 }(typeof exports === 'object' && exports || utils));

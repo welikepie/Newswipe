@@ -19,8 +19,29 @@ else if (Ti.Platform.osname === 'mobileweb') {
 else {
 	//require and open top level UI component
 	
-	var ArcGestureTest = require("ui/ArcGestureTest");
-	new ArcGestureTest().open({fullscreen: true});
+	var win = Titanium.UI.createWindow({backgroundColor: '#FFFFFF'});
+	var RadialMenu = require("common/radial_menu");
+	var tbuttons = [];
+	for (var i = 0; i < 4; i++) {
+		var temp = Titanium.UI.createButton({
+		    title: '',
+		    backgroundImage: "KS_nav_views.png",
+	        width: 40,
+	        height: 40
+	    });
+	    temp.addEventListener(
+	    	"click",
+	    	(function(x) {
+	    		return function(ev) { alert("Clicked " + x + "!"); };
+	    	})(i+1)
+	    );
+	    tbuttons.push(temp);
+	}
+	var menu = new RadialMenu({top: 0, radius: {outer: 200, inner: 150}, angle: 90, items: tbuttons, backgroundImage: 'radial_menu_background.png'});
+	win.add(menu);
+	win.open();
+	//var ArcGestureTest = require("ui/ArcGestureTest");
+	//new ArcGestureTest().open({fullscreen: true});
 	//var ApplicationWindow = require('ui/ApplicationWindow');
 	//new ApplicationWindow().open();
 }
